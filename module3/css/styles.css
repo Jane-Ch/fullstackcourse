@@ -1,0 +1,335 @@
+body {
+  font-size: 16px;
+  color: #fff;
+  background-color: #61122f;
+  font-family: 'Oxygen', sans-serif;
+}
+/*Header*/
+#header-nav{/*整个导航栏*/
+	background-color: #f6b319;
+	border-radius:0;
+	border:0;/*由于navbar两个class自身有一个带圆弧的边框 */
+}
+#logo-img{
+	background: url('../images/restaurant-logo_large.png') no-repeat;
+	width: 150px;
+	height: 150px;
+	margin:10px 15px 10px 0;
+}
+.navbar-brand{
+	padding-top:25px; 
+}
+.navbar-brand h1{/*店铺名称*/
+	font-family: 'Lora',serif;
+	color:#557c3e;
+	font-size: 1.5em;/*设置的是相对于父元素字体大小的倍数值*/
+	text-transform:uppercase;/**大写*/
+	font-weight: bold;/*加粗*/
+	text-shadow: 1px 1px 1px #222;/*宽，高，厚，阴影颜色*/
+	margin-top:0;
+	margin-bottom: 0;
+	line-height: .75;/*缩小了行间距*/
+}	
+.navbar-brand a:hover,.navbar-brand a:focus{/*店铺名称链接*/
+	text-decoration:none;/*去掉链接的下划线*/
+}
+.navbar-brand p{/*Kosher Certified*/
+	color: #000;
+	text-transform: uppercase;
+	font-size: .7em;
+	margin-top:15px;
+}
+.navbar-brand p span{
+	vertical-align: middle;
+}
+#nav-list a{/*列表*/
+	color:#951C49;
+	text-align: center;
+}
+#nav-list a:hover{/*列表晃动背景灰色*/
+	background: #E7E7E7;
+}
+#nav-list a span{/*列表图标变大*/
+	font-size: 1.8em;
+}
+#phone{/*列表：电话向上对齐*/
+	margin-top:5px;
+}
+#phone a{/*电话内容*/
+	text-align: right;
+	padding-bottom: 0;
+}
+#phone div{/*电话下文字*/
+	color: #557c3e;
+	text-align: right;
+	padding-right: 15px;
+}
+.navbar-header button.navbar-toggle, .navbar-header .icon-bar{/*按钮颜色*/
+	border:1px solid #61122f;
+}
+.navbar-header button.navbar-toggle{
+	clear: both;
+	margin-top: -30px;
+}
+/*Header End*/
+/*Home Page*/
+.jumbotron{
+	box-shadow: 0 0 50px #3F0C1F;
+	border: 2px solid #3F0C1F;
+}
+#menu-tile,#specials-tile,#map-tile{
+	width:100% ;
+	height: 250px;
+	margin-bottom: 15px;
+	position: relative;/*为了给他们做准备*/
+	border: 2px solid #3F0C1F;
+	overflow: hidden;/*内容溢出后被隐藏，主要是为了map的内联框架*/
+}
+#menu-tile:hover,#specials-tile:hover,#map-tile:hover{
+	box-shadow: 0 1px 5px 1px #cccccc;/*设置被选择时的边框阴影*/
+}
+#menu-tile span,#specials-tile span,#map-tile span{/*图片底部的标签*/
+	position: absolute;
+	bottom: 0;	
+	left:0;
+	width: 100%;/*标签的宽度，100%并文字居中*/
+
+	text-align: center;
+	font-size: 1.6em;
+	text-transform: :uppercase;
+	background-color: #000;
+	color: #fff;
+	opacity:.8; /*透明度*/
+}
+#menu-tile{/*图片menu*/
+	background: url('../images/menu-tile.jpg') no-repeat;
+	background-position: center;/*因为图片比位置稍大一些*/
+}
+#specials-tile{/*图片*/
+	background: url('../images/specials-tile.jpg') no-repeat;
+	background-position: center;
+}
+/*End Home Page*/
+
+/*Menu Categories Page*/
+.category-tile{/*图片和标签*/
+	position: relative;
+	border: 2px solid #3F0C1F;
+	overflow: hidden;
+	width: 200px;
+	height: 200px;
+	margin: 0 auto 15px;
+}
+.category-tile span{/*标签*/
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	text-align: center;
+	font-size: 1.2em;
+	text-transform: uppercase;
+	background-color: #000;
+	color: #fff;
+	opacity: .8;
+}
+.category-tile:hover{
+	box-shadow: 0 1px 5px 1px #cccccc;
+}
+#menu-categories-title +div{/*title的兄弟元素中的div就是题目下面的那一段话*/
+	margin-bottom: 50px;
+}
+/*End Menu Categories Page*/
+
+/*Single Category Page*/
+.menu-item-tile{/*每个菜品的cell*/
+	margin-bottom: 25px;
+}
+.menu-item-tile hr{/*每个菜品的cell*/
+	width: 80%;
+}
+.menu-item-photo{/*每个菜品的图片部分，上：图片*/
+	position: relative;
+	border:2px solid #3F0C1F;
+	overflow: hidden;
+	padding: 0;
+	margin-right: -15px;
+	margin-left:auto;
+	margin-bottom: 20px;
+	max-width:250px;/**/
+}
+.menu-item-photo div{/*每个菜品的编码D01*/
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 80px;
+	background-color: #557c3e;
+	text-align: center;
+
+}
+.menu-item-tile .menu-item-price{/*每个菜品的图片部分，下：价格*/
+	font-size: 1.1em;
+	text-align: right;
+	margin-top: -15px;/*把价格加到下面,因为Photo的位置靠下了*/
+	margin-right: -15px;
+
+}
+.menu-item-tile .menu-item-price span{/*每个菜品的图片部分，下：价格的单位*/
+	font-size: .6em;
+}
+.menu-item-description{/*每个菜品的右半部分描述*/
+	padding-right: 30px;
+}
+h3.menu-item-title{/*每个菜品的右半部分描述:菜名*/
+	margin: 0 0 10px;
+}
+.menu-item-details{/*每个菜品的右半部分描述:详细描述*/
+	font-size: .9em;
+	font-style: italic;
+}
+/*Footer*/
+.panel-footer{
+	margin-top:30px;
+	padding-top: 35px;
+	padding-bottom: 30px;
+	background-color: #222;
+	border-top: 0;
+}
+.panel-foot div.row{
+	margin-bottom: 35px;
+}
+#hours,#address{
+	line-height: 2;/*行间距,如果默认的话是1.4*/
+}
+#hours>span,#address>span{
+	font-size: 1.3em;
+}
+#address p{
+	color: #557c3e;
+	font-size:.8em; 
+	line-height: 1.8em;
+}
+#testimonials{
+	font-style: italic;
+
+}
+#testimonials p:nth-child(2){/*指定第几个孩子*/
+	margin-top: 25px;
+}
+/*Footer End*/
+@media(min-width:1200px){
+	.jumbotron{
+		background: url('../images/jumbotron_1200.jpg') no-repeat;/*用了小的图片，这样才能显示全部图片，宽和高只是限制图片所占位置，并不能缩小图片*/
+		height: 675px;		
+	}
+
+}
+@media(min-width:992px) and (max-width:1199px) {
+	#logo-img{
+		background: url('../images/restaurant-logo_medium.png') no-repeat;/*用了小的图片，这样才能显示全部图片，宽和高只是限制图片所占位置，并不能缩小图片*/
+		width: 100px;
+		height: 100px;
+		margin:5px 5px 5px 0;
+	}
+	.jumbotron{
+		background: url('../images/jumbotron_992.jpg') no-repeat;/*用了小的图片，这样才能显示全部图片，宽和高只是限制图片所占位置，并不能缩小图片*/
+		height: 558px;/*图片像素992*558*/
+	}	
+}
+@media(min-width:768px)and (max-width:991px) {
+	.jumbotron{
+		background: url('../images/jumbotron_992.jpg') no-repeat;/*用了小的图片，这样才能显示全部图片，宽和高只是限制图片所占位置，并不能缩小图片*/
+		height: 432px;/*图片像素768*432*/
+	}
+}
+@media(max-width:767px){
+	.navbar-brand{
+		padding-top:10px; 
+		height:80px;/*固定了这个框的大小，之前依靠图标撑着，现在都是浮动元素*/
+	}
+	.navbar-brand h1{/*店铺名称*/		
+		font-size: 5vw;/*1vw=1%浏览器宽度*/		
+		padding-top: 10px;
+	}	
+	.navbar-brand p{/*Kosher Certified*/
+		font-size: .6em;/*减小字号*/
+		margin-top:12px;/*减小距离*/
+	}
+	.navbar-brand p img{
+		height: 20px;/*这个图片控制高度就可以缩小了……*/
+	}
+	#collapsable-nav a{/*设置列表中的元素*/
+		font-size: 1.2em;
+	}
+	#collapsable-nav a span{/*设置图标*/
+		font-size: 1em;/*让两个元素平行时大小相同*/
+		margin-right: 5px;/*让两个元素平行时能有一定距离*/
+	}
+	#call-btn > a{
+		font-size: 1.5em;
+		display:block;/*占整行*/
+		margin: 0 20px;
+		padding: 10px;
+		border: 2px solid #fff;
+		background-color: #f6b319;
+		color: #951C49;
+	}
+	#xs-deliver{
+		margin-top: 5px;
+		font-size: .7em;
+		letter-spacing: .1em;
+		text-transform: uppercase;
+	}
+	/*End Header*/
+
+	.jumbotron{
+		margin-top: 30px;
+		padding: 0;
+	}
+	#menu-tile,#specials-tile{/*图片menu*/
+		width: 360px;	/*此时，边框可变，当背景图片小于边框时，减小边框*/
+		margin:0 auto 15px;
+	}
+	
+	/*Footer*/
+	.panel-footer section{
+		margin-bottom: 30px;
+		text-align: center;
+	}
+	.panel-footer section:nth-child(3){/*#testimonials*/
+		margin-bottom: 0;
+	}
+	.panel-footer section hr{
+		width:50%;
+	}
+	.menu-item-photo{/*每个菜品的图片部分，上：图片*/
+		margin-right: auto;
+	}
+	.menu-item-tile .menu-item-price{
+		text-align: center;
+	}
+	.menu-item-description{
+		text-align: center;
+	}
+}
+@media(max-width:479px){
+	/*Header*/
+	.navbar-brand h1{/*restaurant name*/
+		padding-top: 5px;
+		font-size: 6vw; 
+	}
+	/*End Header*/
+
+	/*Home page*/
+	#menu-tile,#specials-tile{
+		width:280px;
+		margin:0 auto 15px;
+	}
+	.col-xxs-12{
+		position: relative;
+		min-height: 1px;
+		padding-right: 15px;
+		padding-left: 15px;
+		float: left;
+		width: 100%;
+	}
+}

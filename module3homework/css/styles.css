@@ -1,0 +1,53 @@
+body {
+	font-size: 16px;
+  	color: #000;
+  	font-family: 'Oxygen', sans-serif;
+}
+
+#header-nav{/*整个导航栏*/
+	background-color: #dc5c0e;
+	width: 100%;	
+	border-radius:0;
+	/*由于navbar两个class自身有一个带圆弧的边框 */
+}
+
+.navbar-default .navbar-brand{
+
+	font-size: 2em;
+	color: #3e1cc1;
+}
+#bs-example-navbar-collapse-1{
+	background-color: #fff;
+	border:2px solid #3dc5c0e;
+	border-color: #dc5c0e;
+	text-align: center;	
+	overflow: hidden;
+}
+#bs-example-navbar-collapse-1 ul{	
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+#bs-example-navbar-collapse-1 a{
+	border:2px solid #dc5c0e;
+	font-size: 1.8em;
+	color: #000;
+
+}
+#bs-example-navbar-collapse-1 a:hover{
+	background: #E7E7E7;
+}
+.navbar-header button.navbar-toggle, .navbar-header .icon-bar{/*按钮颜色*/
+
+	border:1px solid #3e1cc1;
+}
+#title{/*标题*/
+	    color: black;
+	    margin-bottom: 30px;
+}
+#content{
+	
+	padding: 0 15px 0;
+	height: 1000px;
+	background-color:#ec950c; 
+
+}
