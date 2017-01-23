@@ -17,7 +17,7 @@ body {
 	color: #3e1cc1;
 }
 #bs-example-navbar-collapse-1{
-	background-color: #fff;
+	
 	border:2px solid #3dc5c0e;
 	border-color: #dc5c0e;
 	text-align: center;	
@@ -50,4 +50,10 @@ body {
 	height: 1000px;
 	background-color:#ec950c; 
 
+}
+@media(max-width: 767px){
+	#bs-example-navbar-collapse-1{
+		background-color: #fff;
+		
+	}
 }
